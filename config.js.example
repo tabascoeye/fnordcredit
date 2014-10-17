@@ -1,23 +1,20 @@
-var config = {}
+module.exports = {
+    rethinkdb: {
+        host: 'localhost',
+        port: 28015,
+        db: 'fnordcredit',
+        authKey: ''
+    },
 
-config.mqtt = {};
+    settings: {
+        allowDebt: true,
+        maxDebt: -150
+    },
 
-config.mqtt.enable = false;
-config.mqtt.host = "localhost";
-config.mqtt.port = 1883;
-config.mqtt.prefix = "service/fnordcredit";
-
-
-config.rethinkdb = {};
-
-config.rethinkdb.host = "";
-config.rethinkdb.port = 28015;
-config.rethinkdb.db = "fnordcredit";
-config.rethinkdb.authKey = "";
-
-config.settings = {};
-
-config.settings.allowDebt = true;
-config.settings.maxDebt = -150;
-
-module.exports = config;
+    mqtt: {
+        enable: false,
+        host: 'localhost',
+        port: 1882,
+        prefix: 'service/fnordcredit'
+    }
+};
